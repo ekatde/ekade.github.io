@@ -42,37 +42,31 @@
         <div>
             <p><b>Покупая автомобиль, на что вы обратите внимание в первую очередь?</b></p>
             <label>
-              <input type="radio" name="4"> На комфорт и список опций</label>
+              <input type="radio" name="pokupka" value="1"> На комфорт и список опций</label>
               <p></p>
             <label>
-              <input type="radio" name="4"> На внешний вид</label>
+              <input type="radio" name="pokupka" value="2"> На внешний вид</label>
               <p></p>
             <label>
-              <input type="radio" name="4"> На объём багажника и расход</label>
+              <input type="radio" name="pokupka" value="3"> На объём багажника и расход</label>
               <p></p>
             <label>
-              <input type="radio" name="4"> На динамику</label>
-              <p></p>
-            <label>
-              <input type="radio" name="4"> На эргономичность</label>
+              <input type="radio" name="pokupka"value="4"> На динамику</label>
           </div>
           
           <div>
             <p><b>Что вас больше всего привлекает в дизайне автомобиля?</b></p>
             <label>
-              <input type="radio" name="design" value="1"> Динамика и спортивная эстетика </label> 
+              <input type="radio" name="design" value="5"> Динамика и спортивная эстетика </label> 
               <p></p>
             <label>
-              <input type="radio" name="design" value="2"> Резкость и лаконичность </label>
+              <input type="radio" name="design" value="6"> Резкость и лаконичность </label>
               <p></p>
             <label>
-              <input type="radio" name="design" value="3"> Чистота, отсутствие лишних элементов </label>
+              <input type="radio" name="design" value="7"> Чистота, отсутствие лишних элементов </label>
               <p></p>
             <label>
-              <input type="radio" name="design" value="4"> Аккуратность и миниатюрность </label>
-              <p></p>
-            <label>
-              <input type="radio" name="design" value="5"> Простота </label>  
+              <input type="radio" name="design" value="8"> Аккуратность и миниатюрность </label>  
           </div>
       </div>
       <div>
@@ -81,28 +75,64 @@
         <button onclick="Message()"><b>Получить результат</b></button>
         <script>
           function Message() {
-            var radios = document.getElementsByName('design');
-            var selectedValue;
+            var radios1 = document.getElementsByName('pokupka');
+            var selectedValue1;
+            var radios2 = document.getElementsByName('design');
+            var selectedValue2;
 
             // Находим выбранное значение
-            for (var i = 0; i < radios.length; i++) {
-                if (radios[i].checked) {
-                    selectedValue = radios[i].value;
+            for (var i = 0; i < radios1.length; i++) {
+                if (radios1[i].checked) {
+                    selectedValue1 = radios1[i].value;
+                    break;
+                }
+            }
+            for (var i = 0; i < radios2.length; i++) {
+                if (radios2[i].checked) {
+                    selectedValue2 = radios2[i].value;
                     break;
                 }
             }
 
+            console.log(radios1);
+            console.log(radios2);
+            console.log(selectedValue1);
+            console.log(selectedValue2);
+        
+
             // Выводим сообщение в зависимости от выбранного значения
-            if (selectedValue === '1') {
+            if (selectedValue1 === '1' && selectedValue2 === '5') {
                 alert('Вам идеально подходит автомобиль марки - BMW!');
-            } else if (selectedValue === '2') {
+            } else if (selectedValue1 === '1' && selectedValue2 === '6') {
                 alert('Вам идеально подходит автомобиль марки - Mitsubishi!');
-            } else if (selectedValue === '3') {
+            } else if (selectedValue1 === '1' && selectedValue2 === '7') {
                 alert('Вам идеально подходит автомобиль марки - Mercedes!');
-            } else if (selectedValue === '4') {
+            } else if (selectedValue1 === '1' && selectedValue2 === '8') {
                 alert('Вам идеально подходит автомобиль марки - MINI!');
-            } else if (selectedValue === '5') {
-                alert('Вам идеально подходит автомобиль марки - LADA!');
+            } else if (selectedValue1 === '2' && selectedValue2 === '5') {
+                alert('Вам идеально подходит автомобиль марки - BMW!');
+            } else if (selectedValue1 === '2' && selectedValue2 === '6') {
+                alert('Вам идеально подходит автомобиль марки - Mitsubishi!');
+            } else if (selectedValue1 === '2' && selectedValue2 === '7') {
+                alert('Вам идеально подходит автомобиль марки - Mercedes!');
+            } else if (selectedValue1 === '2' && selectedValue2 === '8') {
+                alert('Вам идеально подходит автомобиль марки - MINI!');
+            } else if (selectedValue1 === '3' && selectedValue2 === '5') {
+                alert('Вам идеально подходит автомобиль марки - BMW!');
+            } else if (selectedValue1 === '3' && selectedValue2 === '6') {
+                alert('Вам идеально подходит автомобиль марки - Mitsubishi!');
+            } else if (selectedValue1 === '3' && selectedValue2 === '7') {
+                alert('Вам идеально подходит автомобиль марки - Mercedes!');
+            } else if (selectedValue1 === '3' && selectedValue2 === '8') {
+                alert('Вам идеально подходит автомобиль марки - MINI!');
+            } else if (selectedValue1 === '4' && selectedValue2 === '5') {
+                alert('Вам идеально подходит автомобиль марки - BMW!');
+            } else if (selectedValue1 === '4' && selectedValue2 === '6') {
+                alert('Вам идеально подходит автомобиль марки - Mitsubishi!');
+            } else if (selectedValue1 === '4' && selectedValue2 === '7') {
+                alert('Вам идеально подходит автомобиль марки - Mercedes!');
+            } else if (selectedValue1 === '4' && selectedValue2 === '8') {
+                alert('Вам идеально подходит автомобиль марки - MINI!');
             } else {
                 alert('Пожалуйста, выберите вариант');
             }
